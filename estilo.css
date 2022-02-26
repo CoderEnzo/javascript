@@ -1,0 +1,322 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-size: 700%;
+    background-repeat: no-repeat;
+    background-image: url(./imagenes/fondo.jpg);
+}
+
+/*INDEX*/
+
+.grilla {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "H1 H1 H1 H1 H1 H1"
+    "barra barra barra barra barra barra"
+    ". imagen imagen imagen imagen ."
+    ". imagen imagen imagen imagen ."
+    ". imagen imagen imagen imagen ."
+    "parrafo parrafo parrafo parrafo parrafo parrafo"
+    "footer footer footer footer footer footer";
+}
+
+.H1 { 
+    grid-area: H1;
+    font-family:'Dosis', sans-serif;
+    display: inline;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+.h1{
+    color: black;
+}
+
+.barra { 
+    grid-area: barra; 
+}
+.nav-bar{
+    display: block;
+    color:  black;
+    cursor: pointer;
+    font-size: 3.0em;
+    width: 100% ;
+}
+.menu{
+    list-style:none;
+    width: auto;
+    margin-left: -100%;
+    transition: 0.5s;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.642);
+    z-index: 10000; 
+}
+.menu__link{
+    display: block;
+    padding: 25px;
+    color:  white;
+    font-size: 1.5em;
+    height: 90px;
+}
+.menu__link:hover{
+    background: rgba(0, 0, 0, 0.834);
+}
+.menu__item a{
+    font-family:'Dosis', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.mostrar {
+    margin-left: 0;
+}
+
+
+.imagen { 
+    grid-area: imagen; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.parrafo { 
+    grid-area: parrafo; 
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.footer { 
+    grid-area: footer; 
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+@media(min-width:768px) {
+    
+    .nav-bar{
+        display: none;
+    }
+    .menu {
+        margin-left: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: space-around;
+    }
+}
+
+/*PRODUCTOS*/
+
+.grilla1 {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "H1 H1 H1 H1 H1 H1"
+    "barra barra barra barra barra barra"
+    "producto1 producto1 producto1 producto2 producto2 producto2"
+    "producto1 producto1 producto1 producto2 producto2 producto2"
+    "producto1 producto1 producto1 producto2 producto2 producto2"
+    "footer footer footer footer footer footer";
+}
+
+
+.producto1 { 
+    grid-area: producto1; 
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.producto2 { 
+    grid-area: producto2; 
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+}
+
+/*PROMOCIONES*/
+
+.grilla2 {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "H1 H1 H1 H1 H1 H1"
+    "barra barra barra barra barra barra"
+    "promociones promociones promociones promociones promociones promociones"
+    "promociones promociones promociones promociones promociones promociones"
+    "promociones promociones promociones promociones promociones promociones"
+    "footer footer footer footer footer footer";
+}
+
+
+.promociones { 
+    grid-area: promociones; 
+    line-height: 7;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+}
+
+/*PREGUNTAS*/
+
+.grilla3 {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "H1 H1 H1 H1 H1 H1"
+    "barra barra barra barra barra barra"
+    "preg preg preg preg preg preg"
+    "preg preg preg preg preg preg"
+    "preg preg preg preg preg preg"
+    "footer footer footer footer footer footer";
+}
+
+.preg { 
+    grid-area: preg; 
+    display: flex;
+    justify-content: space-evenly;
+    height: 350px;
+    align-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+
+/*CONTACTO*/
+
+.grilla4 {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "H1 H1 H1 H1 H1 H1"
+    "barra barra barra barra barra barra"
+    "contacto contacto contacto contacto contacto contacto"
+    "contacto contacto contacto contacto contacto contacto"
+    "contacto contacto contacto contacto contacto contacto"
+    "contacto contacto contacto contacto contacto contacto"
+    "contacto contacto contacto contacto contacto contacto"
+    "footer footer footer footer footer footer";
+}
+
+.contacto { grid-area: contacto; }
+
+
+.formulario{
+    width:500px ;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 40px;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.6);
+    position: relative;
+}
+.formulario__titulo{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 0%;
+    color: rgba(0,0,0,0.8);
+}
+.formulario__input, .formulario__laber, .formulario__submit{
+    display: block;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.0.3);
+    font-size: 1.0em;
+}
+.formulario__input:focus {
+    outline: 1px solid rgba(0, 0, 0, 0.0.7);
+}
+.formulario__input:focus + .formulario__label{
+    margin-top: -105px;
+}
+.formulario__input{
+    background: transparent;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0.5);
+    margin-bottom: 40px;
+}
+.formulario__label{
+    padding-left: 15px;
+    position: absolute;
+    margin-top: -70px;
+    z-index: -20;
+    transition: all 0.5s;
+}   
+.formulario__submit{
+    background: rgba(0, 0, 0, 0.19);
+    padding: 10px 20px;
+    cursor: pointer;
+    border:none ;
+}
+.fijar{
+    margin-top: -105px;
+}
+
+/*UBICACION*/
+
+.grilla5 {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "H1 H1 H1 H1 H1 H1"
+    "barra barra barra barra barra barra"
+    "mapa mapa mapa mapa mapa mapa"
+    "mapa mapa mapa mapa mapa mapa"
+    "mapa mapa mapa mapa mapa mapa"
+    "footer footer footer footer footer footer";
+}
+
+.mapa { 
+    grid-area: mapa; 
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}

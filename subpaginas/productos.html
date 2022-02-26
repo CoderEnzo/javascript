@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="esp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../imagenes/favicom.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href=../estilo.css>
+    <title>CostaMazzo</title>
+</head>
+
+<body>
+    <div class="grilla1">
+        
+        <div class="H1">
+            <a href="../index.html"><h1 class="h1">CostaMazzo</h1></a>
+            <div id="subtitulo1"></div>
+        </div>
+        
+        <div class="barra">
+            <span class="nav-bar" id="btnMenu"><i class="fas fa-bars"></i></span>
+            <section>
+                <nav class=main-nav>
+                    <ul class="menu" id="menu">
+                        <li class="menu__item"><a href="productos.html" class="menu__link"><i class="fas fa-shopping-basket"></i> productos</a></li>
+                        <li class="menu__item"><a href="promociones.html" class="menu__link"><i class="fas fa-percent"></i> descuentos<a></li>
+                        <li class="menu__item"><a href="preg.html" class="menu__link"><i class="fas fa-question"></i> preguntas</a></li>
+                        <li class="menu__item"><a href="contacto.html" class="menu__link"><i class="fas fa-id-card"></i> Contacto</a></li>
+                        <li class="menu__item"><a href="ubicacion.html" class="menu__link"><i class="fas fa-search-location"></i> ubicacion</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+        
+        <div class="producto1">
+            <h2>rey verde</h2>
+                <img id='1-image' src="../products/tradicional.jpeg" alt="yerba">
+                <div>
+                <p >precio:$<span id='1-price' class="price">400</span></p>
+                </div>
+                <form>
+                    <select name="yerba-1" onchange="pm.changePriceAndImage(1,this.value)">
+                        <option value="1" selected="tradicional">tradicional</option>
+                        <option value="2">Compuesta</option>
+                        <option value="3">Premium</option>
+                    </select>
+                </form>
+        </div>
+        
+        <div class="producto2">
+            <h2>canarias</h2>
+                <img id="2-image" src="../products/tradicional-canarias.jpeg" alt="yerba">
+                <p>precio: $ <span  id='2-price' class="price">400</span></p>
+                <form>
+                    <select name="yerba-2" onchange="pm.changePriceAndImage(2,this.value)">
+                        <option value="1">Tradicional</option>
+                        <option value="2">Serena</option>
+                    </select>
+                </form>
+        </div>
+        
+        <div class="footer">
+            <h6>Argentina/ Mar del Plata, Buenos aires</h6>
+        </div>
+    </div>
+
+    <script src="../java/java.js"></script>
+    <script src="../java/products.js"></script>
+</body>
+
+</html>
